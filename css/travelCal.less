@@ -1,0 +1,187 @@
+@pngbtn-width:35px;
+@pngbtn-height:35px;
+
+.input-style{
+	outline: none;
+	text-align: center;
+	font-size: 1rem;
+}
+
+html{
+	font-size: 16px;
+	font-family: "YouYuan";
+	background-color: white;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#pg-account{
+	display: none;
+}
+
+.title{
+	margin-top: 0;
+	height: 3.5rem;
+	line-height: 4.5rem;
+	text-align: center;
+	background-color: rgb(40,40,40);
+	font-family: Arial, sans-serif;
+	color: white;
+}
+
+.box-participant > div{
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	.txtPer{
+		margin-right: 5px;
+		height: 1.5rem;
+		border:none;
+		border-bottom: 1px solid gray;
+		.input-style
+	}
+}
+
+.btnAddPer{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/addPer.png) no-repeat 0;
+}
+
+.btnDelPer{
+	width: 20px;
+	height: 20px;
+	background: url(../image/del.png) no-repeat 0;
+	background-size: 20px;
+}
+.btnOK{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/ok.png) no-repeat 0;
+}
+.btnBack{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/back.png) no-repeat 0;
+}
+.btnAddRow{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/add2.png) no-repeat 0;
+}
+.btnDelRow{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/back.png) no-repeat 0;
+}
+.btnCalculate{
+	width: @pngbtn-width;
+	height: @pngbtn-height;
+	background: url(../image/calc.png) no-repeat 0;
+}
+
+/*表格*/
+#tbAccount{
+	width:100%;
+	height: auto;
+	table-layout: fixed;
+
+	thead tr th{
+		border-bottom: 1px solid gray;
+	}
+    tr{
+		height: 2rem;
+		td{
+			border-bottom:1px solid #ddd;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			input{
+				background: transparent;
+				border:none;
+			}
+		}
+		input{
+			width: 100%;
+			.input-style;
+		}
+	}
+}
+
+/*计算结果表格*/
+#tbCalRes{
+	display: none;
+	margin-top: 2rem;
+	width:100%;
+	height: auto;
+	table-layout: fixed;
+
+	thead tr th{
+		border-bottom: 1px solid gray;
+	}
+}
+
+
+/*弹窗*/
+.popupwin{
+	display: none;
+	width: 16rem;
+	height: 20rem;
+
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-10rem 0 0 -8rem;
+	z-index: 999;
+
+	border:1px solid rgb(186,186,186);
+	-webkit-box-shadow: 0px 1px 5px #888888;
+	box-shadow: 0px 1px 5px #888888;
+	background-color: rgb(251,251,251);
+	border-radius: 2px;
+
+	ul{
+		list-style: none;
+		padding:0; 
+
+		li{
+			margin-top: 0.5rem;
+			height: 2rem;
+			line-height: 2rem;
+			text-align: center;
+			/*border-bottom: 1px solid rgb(186,186,186);*/
+		}
+	}
+	.active{
+		background-color:#eee;
+	}
+} 
+
+/*遮罩层*/
+.cover{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	z-index: 99;
+	background-color: gray;
+	opacity: 0.4;
+}
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	/*border:1px solid gray;*/
+}
